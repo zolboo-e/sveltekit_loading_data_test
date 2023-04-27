@@ -2,9 +2,9 @@ import { fail, redirect } from "@sveltejs/kit";
 import { PUBLIC_BACKEND_BASE_URL } from "$env/static/public";
 import type { Actions, PageServerLoad } from "./$types";
 
-export const load: PageServerLoad = async () => {
+export const load = (async () => {
   // todo
-};
+}) satisfies PageServerLoad;
 
 export const actions = {
   default: async ({ cookies, fetch, request, url }) => {

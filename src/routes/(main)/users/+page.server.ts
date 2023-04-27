@@ -11,7 +11,7 @@ export const load = (async ({ fetch, url }) => {
     }
   );
 
-  const data = await response.json();
+  const data: { employees: any[]; meta: any } = await response.json();
 
   return data;
 }) satisfies PageServerLoad;
